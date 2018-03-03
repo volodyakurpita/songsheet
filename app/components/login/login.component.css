@@ -1,0 +1,14 @@
+.container {
+    padding-left: 40;
+    padding-right: 40;
+ }
+ 
+ .group {
+     padding: 5pt;
+ }
+ 
+ .btn-login {
+     background-color: #0036ac;  
+     color: #fff;
+     margin-bottom: 10pt;
+ }

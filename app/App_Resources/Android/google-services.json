@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278101373169",
+    "firebase_url": "https://song-sheet-895ec.firebaseio.com",
+    "project_id": "song-sheet-895ec",
+    "storage_bucket": "song-sheet-895ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278101373169:android:b74fe4f7b88ae2a2",
+        "android_client_info": {
+          "package_name": "org.nativescript.SongSheet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278101373169-ktdt11dm7jcc5so3fv36h3bsq77775hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGqj3TgN4s3MIfYgHMNK8aFSsq5a-H9kk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
