@@ -1,0 +1,11 @@
+.container {
+    padding-left: 50;
+    padding-right: 50;
+}
+ 
+.btn-register {
+    background-color: #0036ac; 
+    color: #fff;
+    margin-bottom: 7pt;
+    margin-top: 10pt;
+}

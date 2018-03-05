@@ -4,6 +4,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
 import { AppComponent } from "./app.component";
 import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from "./components/login/registration/registration.component";
 
 import { Config } from './common/config';
 import { AppRoutingModule } from "./app.routing";
@@ -19,7 +20,8 @@ import { AppRoutingModule } from "./app.routing";
   ],
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   providers: [
     Config

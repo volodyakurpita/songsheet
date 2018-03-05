@@ -31,6 +31,7 @@ export class LoginComponent {
     .then((user) => {
         this.isLoading = false;
         Config.saveAllUserInfo(user);
+        alert("Welcome" + " " + `${user.email}`);
     }, (error) => {
         this.isLoading = false;
         alert("Error: " + error);
