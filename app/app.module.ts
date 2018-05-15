@@ -8,6 +8,9 @@ import { RegistrationComponent } from "./components/login/registration/registrat
 
 import { Config } from './common/config';
 import { AppRoutingModule } from "./app.routing";
+import { TabsComponent } from "./components/tabs/tabs.component";
+import { SongsComponent } from "./components/songs/songs.component";
+import { ErrorMessage } from "./components/error-message/error-message";
 
 @NgModule({
   bootstrap: [
@@ -21,10 +24,13 @@ import { AppRoutingModule } from "./app.routing";
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    TabsComponent,
+    SongsComponent
   ],
   providers: [
-    Config
+    Config,
+    ErrorMessage
 ],
   schemas: [NO_ERRORS_SCHEMA],
 })
