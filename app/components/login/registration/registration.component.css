@@ -3,9 +3,14 @@
     padding-right: 50;
 }
  
-.btn-register {
+Button {
     background-color: #0036ac; 
     color: #fff;
     margin-bottom: 7pt;
     margin-top: 10pt;
+}
+
+.error-label {
+    color: red;
+    font-size: 11;
 }

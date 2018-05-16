@@ -7,8 +7,17 @@
      padding: 5pt;
  }
  
- .btn-login {
-     background-color: #0036ac;  
+ Button {
+     background-color: #0036ac;
      color: #fff;
      margin-bottom: 10pt;
+ }
+
+ Button:disabled {
+    background-color: #d3d0d0;
+}
+
+ .error-label {
+     color: red;
+     font-size: 11;
  }

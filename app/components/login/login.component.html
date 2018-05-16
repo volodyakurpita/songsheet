@@ -1,26 +1,29 @@
 <StackLayout verticalAlignment="center" 
              class="container">
-    <ActivityIndicator [busy]="isLoading" [visibility]="isLoading ? 'visible' : 'collapse'" 
-                       horizontalAlignment="center" verticalAlignment="center"></ActivityIndicator>
-   
     <StackLayout class="group">
         <TextField #email="ngModel" [(ngModel)]="form.email" hint="Ел. Пошта"
-                   keyboardType="email"  minlength="1" required></TextField>
-        <StackLayout *ngIf="email.errors && email.dirty && email.touched">
+                   keyboardType="email"  minlength="1" (textChange)="onTextChange($event)" required></TextField>
+        <StackLayout *ngIf="email.errors && email.dirty && email.touched" class="error-label">
             <Label *ngIf="email?.errors.required" text="- Поле Ел. пошта є обов'язковим -"></Label>
             <Label *ngIf="email?.errors.minlength" text="- Поле Ел. пошта має мати не менше одного символа -"></Label>
         </StackLayout>
     </StackLayout>
     <StackLayout class="group">
         <TextField #password="ngModel" [(ngModel)]="form.password" secure="true"
-                   hint="Пароль" minlength="1" required></TextField>
-        <StackLayout *ngIf="password.errors && password.dirty && password.touched">
+                   hint="Пароль" minlength="1" (textChange)="onTextChange($event)" required></TextField>
+        <StackLayout *ngIf="password.errors && password.dirty && password.touched" class="error-label">
             <Label *ngIf="password?.errors.required" text="- Поле Пароль є обов'язковим -"></Label>
             <Label *ngIf="password?.errors.minlength" text="- Поле Пароль має мати не менше одного символа -"></Label>
         </StackLayout>
     </StackLayout>
+
+    <ActivityIndicator [busy]="isLoading" 
+                       [visibility]="isLoading ? 'visible' : 'collapse'" 
+                       horizontalAlignment="center" 
+                       verticalAlignment="center"></ActivityIndicator>
+
     <StackLayout class="group">
-        <Button text="Увійти" class="btn-login" (tap)="login()"></Button>
+        <Button #loginBtn text="Увійти" (tap)="login()" isEnabled="false"></Button>
         <Label [nsRouterLink]="['/registration']" text="Не має акаунта? Зареєструйся тут." class="text-center footnote"></Label>
     </StackLayout>
 </StackLayout>

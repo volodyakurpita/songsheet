@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterExtensions } from 'nativescript-angular/router';
-import firebase = require('nativescript-plugin-firebase');
 import { Page } from 'ui/page';
+import { ErrorMessage } from './../../error-message/error-message';
+import firebase = require('nativescript-plugin-firebase');
 
 @Component({
     moduleId: module.id,
@@ -22,16 +23,13 @@ export class RegistrationComponent {
         firebase.createUser({
             email: this.form.email,
             password: this.form.password
-        })
-        .then(
-            user => {
-                this.isLoading = false;
-                alert("Створено нового користовача!");
-            }, 
-            error => {
-                this.isLoading = false;
-                alert("Error: " + error);
-            }
-        );
+        }).then(user => {
+            this.isLoading = false;
+            ErrorMessage.show("Створено нового користовача!");
+            this.router.navigate(['']);
+        }).catch(error => {
+            this.isLoading = false;
+            ErrorMessage.show(error);
+        });
     }
 }

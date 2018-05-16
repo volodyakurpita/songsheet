@@ -36,5 +36,9 @@
 	<string>1:278101373169:ios:b74fe4f7b88ae2a2</string>
 	<key>DATABASE_URL</key>
 	<string>https://song-sheet-895ec.firebaseio.com</string>
+	<key>com.apple.keystore.access-keychain-keys</key>
+    <true/>
+    <key>com.apple.keystore.device</key>
+    <true/>
 </dict>
 </plist>
